@@ -7,29 +7,29 @@
 
 #ifndef EEPROMTIMEDB_H_
 #define EEPROMTIMEDB_H_
-
+#include <DiscreteRecord.h>
 class EEPROMTimeDB {
 public:
 	EEPROMTimeDB();
 
+//	void initialize();
+//	bool store(DiscreteRecord);
+//	float  getAvailableSpace();
 
-	bool store(XXX);
-	XXX[] getRecords(unsigned long,unsigned long, XXX);
+	void getRecords(DiscreteRecord returnRecords[], unsigned long, unsigned long, DiscreteRecord);
+	void getRecords(DiscreteRecord returnRecords[], unsigned long, DiscreteRecord);
 
-	getRecords(unsigned long,unsigned long,XXX);
-
-	float  getAvailableSpace();
-	bool delete(unsigned long,XXX);
-	bool delete(unsigned long,unsigned long,XXX);
-	bool delete(XXX);
-	void initialize();
+	bool deleteRecords(unsigned long, DiscreteRecord);
+	bool deleteRecords(unsigned long, unsigned long,DiscreteRecord);
+	bool deleteRecords(DiscreteRecord);
+//
 
 
 	unsigned long  recordsInPeriod(unsigned long,unsigned long);
-	unsigned long  recordsInPeriod(XXX);
-	unsigned long  recordsInPeriod(unsigned long,XXX);
-	unsigned long  recordsInPeriod(unsigned long,unsigned long,XXX);
-	unsigned long  recordsInPeriod(unsigned long,XXX);
+	unsigned long  recordsInPeriod(DiscreteRecord);
+	unsigned long  recordsInPeriod(unsigned long,DiscreteRecord);
+	unsigned long  recordsInPeriod(unsigned long,unsigned long,DiscreteRecord);
+	unsigned long  recordsInPeriod(unsigned long,DiscreteRecord);
 
 	virtual ~EEPROMTimeDB();
 };
