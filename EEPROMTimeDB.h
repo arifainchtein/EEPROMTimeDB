@@ -12,10 +12,10 @@ class EEPROMTimeDB {
 public:
 	EEPROMTimeDB();
 
-//	void initialize();
-//	bool store(DiscreteRecord);
-//	float  getAvailableSpace();
-
+	void initialize();
+	bool store(DiscreteRecord);
+	float  getAvailableSpace();
+	bool store(DiscreteRecord);
 	void getRecords(DiscreteRecord returnRecords[], unsigned long, unsigned long, DiscreteRecord);
 	void getRecords(DiscreteRecord returnRecords[], unsigned long, DiscreteRecord);
 
